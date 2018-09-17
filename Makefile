@@ -22,7 +22,7 @@ build:
 	CGO_ENABLED=1 \
 	go mod tidy
 	go mod verify
-	go build -tags $(GLES_VERSION) -buildmode=c-shared -o android/jni/lib/libnkactivity.so
+	go build -tags $(GLES_VERSION) -buildmode=c-shared -o android/jni/lib/libwalkcamactivity.so
 
 apk:
 	cd android && make
