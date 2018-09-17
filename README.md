@@ -6,7 +6,7 @@
 - It does this by creating as small floating window, containing the view as seen
 from the front facing camera, allowing you to better pay attention to where you are going.
 
-- **My intention is to make it so that I, or anybody else, never accidentally walks into a signpost/lightpost while walking and using their device...**
+- **My intention is to make it so that I, or anybody else, never again accidentally walks into a signpost/lightpost while walking and using their device...**
 
 - _*`Which is honestly how I was struck by the idea; or rather: I struck the idea...  ?;\ lol.`*_
 
