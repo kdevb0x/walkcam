@@ -1,0 +1,578 @@
+!_TAG_FILE_FORMAT	2
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted/
+!_TAG_PROGRAM_AUTHOR	Joel Stemmer	/stemmertech@gmail.com/
+!_TAG_PROGRAM_NAME	gotags
+!_TAG_PROGRAM_URL	https://github.com/jstemmer/gotags
+!_TAG_PROGRAM_VERSION	1.4.1	/devel +f17220c208 Tue Jul 17 05:41:06 2018 +0000/
+Asset	android/fonts/dejavu.go	514;"	f	access:public	line:514	signature:(name string)	type:[]byte, error
+Asset	refs/nk-android/bindata.go	115;"	f	access:public	line:115	signature:(name string)	type:[]byte, error
+AssetClose	refs/android.go	104;"	f	access:public	line:104	signature:(asset *Asset)
+AssetDir	android/fonts/dejavu.go	599;"	f	access:public	line:599	signature:(name string)	type:[]string, error
+AssetDir	refs/nk-android/bindata.go	181;"	f	access:public	line:181	signature:(name string)	type:[]string, error
+AssetDirClose	refs/android.go	68;"	f	access:public	line:68	signature:(assetDir *AssetDir)
+AssetDirGetNextFileName	refs/android.go	54;"	f	access:public	line:54	signature:(assetDir *AssetDir)	type:string
+AssetDirRewind	refs/android.go	62;"	f	access:public	line:62	signature:(assetDir *AssetDir)
+AssetGetBuffer	refs/android.go	110;"	f	access:public	line:110	signature:(asset *Asset)	type:unsafe.Pointer
+AssetGetLength	refs/android.go	118;"	f	access:public	line:118	signature:(asset *Asset)	type:int
+AssetGetLength64	refs/android.go	126;"	f	access:public	line:126	signature:(asset *Asset)	type:int64
+AssetGetRemainingLength	refs/android.go	134;"	f	access:public	line:134	signature:(asset *Asset)	type:int
+AssetGetRemainingLength64	refs/android.go	142;"	f	access:public	line:142	signature:(asset *Asset)	type:int64
+AssetInfo	android/fonts/dejavu.go	540;"	f	access:public	line:540	signature:(name string)	type:os.FileInfo, error
+AssetInfo	refs/nk-android/bindata.go	141;"	f	access:public	line:141	signature:(name string)	type:os.FileInfo, error
+AssetIsAllocated	refs/android.go	170;"	f	access:public	line:170	signature:(asset *Asset)	type:int32
+AssetManagerFromJava	refs/android.go	178;"	f	access:public	line:178	signature:(env *JNIEnv, assetManager Jobject)	type:*AssetManager
+AssetManagerOpen	refs/android.go	44;"	f	access:public	line:44	signature:(mgr *AssetManager, filename string, mode int32)	type:*Asset
+AssetManagerOpenDir	refs/android.go	35;"	f	access:public	line:35	signature:(mgr *AssetManager, dirName string)	type:*AssetDir
+AssetNames	android/fonts/dejavu.go	553;"	f	access:public	line:553	signature:()	type:[]string
+AssetNames	refs/nk-android/bindata.go	154;"	f	access:public	line:154	signature:()	type:[]string
+AssetOpenFileDescriptor	refs/android.go	150;"	f	access:public	line:150	signature:(asset *Asset, outStart *int, outLength *int)	type:int32
+AssetOpenFileDescriptor64	refs/android.go	160;"	f	access:public	line:160	signature:(asset *Asset, outStart *int64, outLength *int64)	type:int32
+AssetRead	refs/android.go	74;"	f	access:public	line:74	signature:(asset *Asset, buf unsafe.Pointer, count uint32)	type:int32
+AssetSeek	refs/android.go	84;"	f	access:public	line:84	signature:(asset *Asset, offset int, whence int32)	type:int
+AssetSeek64	refs/android.go	94;"	f	access:public	line:94	signature:(asset *Asset, offset int64, whence int32)	type:int64
+C	refs/android.go	31;"	i	line:31
+Children	android/fonts/dejavu.go	623;"	w	access:public	ctype:bintree	line:623	type:map[string]*bintree
+Children	refs/nk-android/bindata.go	205;"	w	access:public	ctype:bintree	line:205	type:map[string]*bintree
+ConfigurationCopy	refs/android.go	207;"	f	access:public	line:207	signature:(dest *Configuration, src *Configuration)
+ConfigurationDelete	refs/android.go	194;"	f	access:public	line:194	signature:(config *Configuration)
+ConfigurationDiff	refs/android.go	512;"	f	access:public	line:512	signature:(config1 *Configuration, config2 *Configuration)	type:int32
+ConfigurationFromAssetManager	refs/android.go	200;"	f	access:public	line:200	signature:(out *Configuration, am *AssetManager)
+ConfigurationGetCountry	refs/android.go	258;"	f	access:public	line:258	signature:(config *Configuration, outCountry *byte)
+ConfigurationGetDensity	refs/android.go	302;"	f	access:public	line:302	signature:(config *Configuration)	type:int32
+ConfigurationGetKeyboard	refs/android.go	317;"	f	access:public	line:317	signature:(config *Configuration)	type:int32
+ConfigurationGetKeysHidden	refs/android.go	347;"	f	access:public	line:347	signature:(config *Configuration)	type:int32
+ConfigurationGetLanguage	refs/android.go	244;"	f	access:public	line:244	signature:(config *Configuration, outLanguage *byte)
+ConfigurationGetLayoutDirection	refs/android.go	497;"	f	access:public	line:497	signature:(config *Configuration)	type:int32
+ConfigurationGetMcc	refs/android.go	214;"	f	access:public	line:214	signature:(config *Configuration)	type:int32
+ConfigurationGetMnc	refs/android.go	229;"	f	access:public	line:229	signature:(config *Configuration)	type:int32
+ConfigurationGetNavHidden	refs/android.go	362;"	f	access:public	line:362	signature:(config *Configuration)	type:int32
+ConfigurationGetNavigation	refs/android.go	332;"	f	access:public	line:332	signature:(config *Configuration)	type:int32
+ConfigurationGetOrientation	refs/android.go	272;"	f	access:public	line:272	signature:(config *Configuration)	type:int32
+ConfigurationGetScreenHeightDp	refs/android.go	467;"	f	access:public	line:467	signature:(config *Configuration)	type:int32
+ConfigurationGetScreenLong	refs/android.go	407;"	f	access:public	line:407	signature:(config *Configuration)	type:int32
+ConfigurationGetScreenSize	refs/android.go	392;"	f	access:public	line:392	signature:(config *Configuration)	type:int32
+ConfigurationGetScreenWidthDp	refs/android.go	452;"	f	access:public	line:452	signature:(config *Configuration)	type:int32
+ConfigurationGetSdkVersion	refs/android.go	377;"	f	access:public	line:377	signature:(config *Configuration)	type:int32
+ConfigurationGetSmallestScreenWidthDp	refs/android.go	482;"	f	access:public	line:482	signature:(config *Configuration)	type:int32
+ConfigurationGetTouchscreen	refs/android.go	287;"	f	access:public	line:287	signature:(config *Configuration)	type:int32
+ConfigurationGetUiModeNight	refs/android.go	437;"	f	access:public	line:437	signature:(config *Configuration)	type:int32
+ConfigurationGetUiModeType	refs/android.go	422;"	f	access:public	line:422	signature:(config *Configuration)	type:int32
+ConfigurationIsBetterThan	refs/android.go	530;"	f	access:public	line:530	signature:(base *Configuration, test *Configuration, requested *Configuration)	type:int32
+ConfigurationMatch	refs/android.go	521;"	f	access:public	line:521	signature:(base *Configuration, requested *Configuration)	type:int32
+ConfigurationNew	refs/android.go	187;"	f	access:public	line:187	signature:()	type:*Configuration
+ConfigurationSetCountry	refs/android.go	265;"	f	access:public	line:265	signature:(config *Configuration, country string)
+ConfigurationSetDensity	refs/android.go	310;"	f	access:public	line:310	signature:(config *Configuration, density int32)
+ConfigurationSetKeyboard	refs/android.go	325;"	f	access:public	line:325	signature:(config *Configuration, keyboard int32)
+ConfigurationSetKeysHidden	refs/android.go	355;"	f	access:public	line:355	signature:(config *Configuration, keysHidden int32)
+ConfigurationSetLanguage	refs/android.go	251;"	f	access:public	line:251	signature:(config *Configuration, language string)
+ConfigurationSetLayoutDirection	refs/android.go	505;"	f	access:public	line:505	signature:(config *Configuration, value int32)
+ConfigurationSetMcc	refs/android.go	222;"	f	access:public	line:222	signature:(config *Configuration, mcc int32)
+ConfigurationSetMnc	refs/android.go	237;"	f	access:public	line:237	signature:(config *Configuration, mnc int32)
+ConfigurationSetNavHidden	refs/android.go	370;"	f	access:public	line:370	signature:(config *Configuration, navHidden int32)
+ConfigurationSetNavigation	refs/android.go	340;"	f	access:public	line:340	signature:(config *Configuration, navigation int32)
+ConfigurationSetOrientation	refs/android.go	280;"	f	access:public	line:280	signature:(config *Configuration, orientation int32)
+ConfigurationSetScreenHeightDp	refs/android.go	475;"	f	access:public	line:475	signature:(config *Configuration, value int32)
+ConfigurationSetScreenLong	refs/android.go	415;"	f	access:public	line:415	signature:(config *Configuration, screenLong int32)
+ConfigurationSetScreenSize	refs/android.go	400;"	f	access:public	line:400	signature:(config *Configuration, screenSize int32)
+ConfigurationSetScreenWidthDp	refs/android.go	460;"	f	access:public	line:460	signature:(config *Configuration, value int32)
+ConfigurationSetSdkVersion	refs/android.go	385;"	f	access:public	line:385	signature:(config *Configuration, sdkVersion int32)
+ConfigurationSetSmallestScreenWidthDp	refs/android.go	490;"	f	access:public	line:490	signature:(config *Configuration, value int32)
+ConfigurationSetTouchscreen	refs/android.go	295;"	f	access:public	line:295	signature:(config *Configuration, touchscreen int32)
+ConfigurationSetUiModeNight	refs/android.go	445;"	f	access:public	line:445	signature:(config *Configuration, uiModeNight int32)
+ConfigurationSetUiModeType	refs/android.go	430;"	f	access:public	line:430	signature:(config *Configuration, uiModeType int32)
+Destroy	refs/example-egl/sensor.go	105;"	m	access:public	ctype:SensorMan	line:105	signature:()
+Easy	refs/nk-android/main.go	265;"	c	access:public	line:265	type:Option
+Func	android/fonts/dejavu.go	622;"	w	access:public	ctype:bintree	line:622	type:func() *asset, error
+Func	refs/nk-android/bindata.go	204;"	w	access:public	ctype:bintree	line:204	type:func() *asset, error
+Hard	refs/nk-android/main.go	266;"	c	access:public	line:266	type:Option
+InputEventGetDeviceId	refs/android.go	670;"	f	access:public	line:670	signature:(event *InputEvent)	type:int32
+InputEventGetSource	refs/android.go	678;"	f	access:public	line:678	signature:(event *InputEvent)	type:int32
+InputEventGetType	refs/android.go	662;"	f	access:public	line:662	signature:(event *InputEvent)	type:int32
+InputQueueAttachLooper	refs/android.go	1111;"	f	access:public	line:1111	signature:(queue *InputQueue, looper *Looper, ident int32, callback LooperCallbackFunc, data unsafe.Pointer)
+InputQueueDetachLooper	refs/android.go	1121;"	f	access:public	line:1121	signature:(queue *InputQueue)
+InputQueueFinishEvent	refs/android.go	1153;"	f	access:public	line:1153	signature:(queue *InputQueue, event *InputEvent, handled int32)
+InputQueueGetEvent	refs/android.go	1135;"	f	access:public	line:1135	signature:(queue *InputQueue, outEvent **InputEvent)	type:int32
+InputQueueHasEvents	refs/android.go	1127;"	f	access:public	line:1127	signature:(queue *InputQueue)	type:int32
+InputQueuePreDispatchEvent	refs/android.go	1144;"	f	access:public	line:1144	signature:(queue *InputQueue, event *InputEvent)	type:int32
+IsDir	android/fonts/dejavu.go	84;"	m	access:public	ctype:bindataFileInfo	line:84	signature:()	type:bool
+IsDir	refs/nk-android/bindata.go	65;"	m	access:public	ctype:bindataFileInfo	line:65	signature:()	type:bool
+JNIAttachCurrentThread	refs/android.go	1505;"	f	access:public	line:1505	signature:(vm *JavaVM, pEnv **JNIEnv, thrArgs *JavaVMAttachArgs)	type:Jint
+JNIAttachCurrentThreadAsDaemon	refs/android.go	1533;"	f	access:public	line:1533	signature:(vm *JavaVM, pEnv **JNIEnv, thrArgs unsafe.Pointer)	type:Jint
+JNIDestroyJavaVM	refs/android.go	1497;"	f	access:public	line:1497	signature:(vm *JavaVM)	type:Jint
+JNIDetachCurrentThread	refs/android.go	1515;"	f	access:public	line:1515	signature:(vm *JavaVM)	type:Jint
+JNIEnvAllocObject	refs/android.go	1746;"	f	access:public	line:1746	signature:(env *JNIEnv, clazz *Jclass)	type:Jobject
+JNIEnvCallBooleanMethod	refs/android.go	1807;"	f	access:public	line:1807	signature:(env *JNIEnv, obj Jobject, id JmethodID, args []Jvalue)	type:Jboolean
+JNIEnvCallByteMethod	refs/android.go	1818;"	f	access:public	line:1818	signature:(env *JNIEnv, obj Jobject, id JmethodID, args []Jvalue)	type:Jbyte
+JNIEnvCallCharMethod	refs/android.go	1829;"	f	access:public	line:1829	signature:(env *JNIEnv, obj Jobject, id JmethodID, args []Jvalue)	type:Jchar
+JNIEnvCallDoubleMethod	refs/android.go	1884;"	f	access:public	line:1884	signature:(env *JNIEnv, obj Jobject, id JmethodID, args []Jvalue)	type:Jdouble
+JNIEnvCallFloatMethod	refs/android.go	1873;"	f	access:public	line:1873	signature:(env *JNIEnv, obj Jobject, id JmethodID, args []Jvalue)	type:Jfloat
+JNIEnvCallIntMethod	refs/android.go	1851;"	f	access:public	line:1851	signature:(env *JNIEnv, obj Jobject, id JmethodID, args []Jvalue)	type:Jint
+JNIEnvCallLongMethod	refs/android.go	1862;"	f	access:public	line:1862	signature:(env *JNIEnv, obj Jobject, id JmethodID, args []Jvalue)	type:Jlong
+JNIEnvCallNonvirtualBooleanMethod	refs/android.go	1916;"	f	access:public	line:1916	signature:(env *JNIEnv, obj Jobject, clazz *Jclass, id JmethodID, args []Jvalue)	type:Jboolean
+JNIEnvCallNonvirtualByteMethod	refs/android.go	1928;"	f	access:public	line:1928	signature:(env *JNIEnv, obj Jobject, clazz *Jclass, id JmethodID, args []Jvalue)	type:Jbyte
+JNIEnvCallNonvirtualCharMethod	refs/android.go	1940;"	f	access:public	line:1940	signature:(env *JNIEnv, obj Jobject, clazz *Jclass, id JmethodID, args []Jvalue)	type:Jchar
+JNIEnvCallNonvirtualDoubleMethod	refs/android.go	2000;"	f	access:public	line:2000	signature:(env *JNIEnv, obj Jobject, clazz *Jclass, id JmethodID, args []Jvalue)	type:Jdouble
+JNIEnvCallNonvirtualFloatMethod	refs/android.go	1988;"	f	access:public	line:1988	signature:(env *JNIEnv, obj Jobject, clazz *Jclass, id JmethodID, args []Jvalue)	type:Jfloat
+JNIEnvCallNonvirtualIntMethod	refs/android.go	1964;"	f	access:public	line:1964	signature:(env *JNIEnv, obj Jobject, clazz *Jclass, id JmethodID, args []Jvalue)	type:Jint
+JNIEnvCallNonvirtualLongMethod	refs/android.go	1976;"	f	access:public	line:1976	signature:(env *JNIEnv, obj Jobject, clazz *Jclass, id JmethodID, args []Jvalue)	type:Jlong
+JNIEnvCallNonvirtualObjectMethod	refs/android.go	1904;"	f	access:public	line:1904	signature:(env *JNIEnv, obj Jobject, clazz *Jclass, id JmethodID, args []Jvalue)	type:Jobject
+JNIEnvCallNonvirtualShortMethod	refs/android.go	1952;"	f	access:public	line:1952	signature:(env *JNIEnv, obj Jobject, clazz *Jclass, id JmethodID, args []Jvalue)	type:Jshort
+JNIEnvCallNonvirtualVoidMethod	refs/android.go	2012;"	f	access:public	line:2012	signature:(env *JNIEnv, obj Jobject, clazz *Jclass, id JmethodID, args []Jvalue)
+JNIEnvCallObjectMethod	refs/android.go	1796;"	f	access:public	line:1796	signature:(env *JNIEnv, obj Jobject, id JmethodID, args []Jvalue)	type:Jobject
+JNIEnvCallShortMethod	refs/android.go	1840;"	f	access:public	line:1840	signature:(env *JNIEnv, obj Jobject, id JmethodID, args []Jvalue)	type:Jshort
+JNIEnvCallStaticBooleanMethod	refs/android.go	2226;"	f	access:public	line:2226	signature:(env *JNIEnv, clazz *Jclass, id JmethodID, args []Jvalue)	type:Jboolean
+JNIEnvCallStaticByteMethod	refs/android.go	2237;"	f	access:public	line:2237	signature:(env *JNIEnv, clazz *Jclass, id JmethodID, args []Jvalue)	type:Jbyte
+JNIEnvCallStaticCharMethod	refs/android.go	2248;"	f	access:public	line:2248	signature:(env *JNIEnv, clazz *Jclass, id JmethodID, args []Jvalue)	type:Jchar
+JNIEnvCallStaticDoubleMethod	refs/android.go	2303;"	f	access:public	line:2303	signature:(env *JNIEnv, clazz *Jclass, id JmethodID, args []Jvalue)	type:Jdouble
+JNIEnvCallStaticFloatMethod	refs/android.go	2292;"	f	access:public	line:2292	signature:(env *JNIEnv, clazz *Jclass, id JmethodID, args []Jvalue)	type:Jfloat
+JNIEnvCallStaticIntMethod	refs/android.go	2270;"	f	access:public	line:2270	signature:(env *JNIEnv, clazz *Jclass, id JmethodID, args []Jvalue)	type:Jint
+JNIEnvCallStaticLongMethod	refs/android.go	2281;"	f	access:public	line:2281	signature:(env *JNIEnv, clazz *Jclass, id JmethodID, args []Jvalue)	type:Jlong
+JNIEnvCallStaticObjectMethod	refs/android.go	2215;"	f	access:public	line:2215	signature:(env *JNIEnv, clazz *Jclass, id JmethodID, args []Jvalue)	type:Jobject
+JNIEnvCallStaticShortMethod	refs/android.go	2259;"	f	access:public	line:2259	signature:(env *JNIEnv, clazz *Jclass, id JmethodID, args []Jvalue)	type:Jshort
+JNIEnvCallStaticVoidMethod	refs/android.go	2314;"	f	access:public	line:2314	signature:(env *JNIEnv, clazz *Jclass, id JmethodID, args []Jvalue)
+JNIEnvCallVoidMethod	refs/android.go	1895;"	f	access:public	line:1895	signature:(env *JNIEnv, obj Jobject, id JmethodID, args []Jvalue)
+JNIEnvDefineClass	refs/android.go	1551;"	f	access:public	line:1551	signature:(env *JNIEnv, name string, obj Jobject, buf []byte, bufLen int32)	type:*Jclass
+JNIEnvDeleteGlobalRef	refs/android.go	1704;"	f	access:public	line:1704	signature:(env *JNIEnv, ref Jobject)
+JNIEnvDeleteLocalRef	refs/android.go	1711;"	f	access:public	line:1711	signature:(env *JNIEnv, ref Jobject)
+JNIEnvDeleteWeakGlobalRef	refs/android.go	3114;"	f	access:public	line:3114	signature:(env *JNIEnv, obj *Jweak)
+JNIEnvEnsureLocalCapacity	refs/android.go	1737;"	f	access:public	line:1737	signature:(env *JNIEnv, capacity int32)	type:Jint
+JNIEnvExceptionCheck	refs/android.go	3121;"	f	access:public	line:3121	signature:(env *JNIEnv)	type:Jboolean
+JNIEnvExceptionClear	refs/android.go	1664;"	f	access:public	line:1664	signature:(env *JNIEnv)
+JNIEnvExceptionDescribe	refs/android.go	1658;"	f	access:public	line:1658	signature:(env *JNIEnv)
+JNIEnvExceptionOccurred	refs/android.go	1650;"	f	access:public	line:1650	signature:(env *JNIEnv)	type:*Jthrowable
+JNIEnvFatalError	refs/android.go	1670;"	f	access:public	line:1670	signature:(env *JNIEnv, msg string)
+JNIEnvFindClass	refs/android.go	1563;"	f	access:public	line:1563	signature:(env *JNIEnv, name string)	type:*Jclass
+JNIEnvFromReflectedField	refs/android.go	1581;"	f	access:public	line:1581	signature:(env *JNIEnv, obj Jobject)	type:JfieldID
+JNIEnvFromReflectedMethod	refs/android.go	1572;"	f	access:public	line:1572	signature:(env *JNIEnv, obj Jobject)	type:JmethodID
+JNIEnvGetArrayLength	refs/android.go	2578;"	f	access:public	line:2578	signature:(env *JNIEnv, arr Jarray)	type:Jsize
+JNIEnvGetBooleanArrayElements	refs/android.go	2689;"	f	access:public	line:2689	signature:(env *JNIEnv, arr *JbooleanArray, isCopy *byte)	type:*Jboolean
+JNIEnvGetBooleanArrayRegion	refs/android.go	2841;"	f	access:public	line:2841	signature:(env *JNIEnv, arr *JbooleanArray, start int32, length int32, buf *byte)
+JNIEnvGetBooleanField	refs/android.go	2043;"	f	access:public	line:2043	signature:(env *JNIEnv, obj Jobject, id JfieldID)	type:Jboolean
+JNIEnvGetByteArrayElements	refs/android.go	2699;"	f	access:public	line:2699	signature:(env *JNIEnv, arr *JbyteArray, isCopy *byte)	type:*Jbyte
+JNIEnvGetByteArrayRegion	refs/android.go	2851;"	f	access:public	line:2851	signature:(env *JNIEnv, arr *JbyteArray, start int32, length int32, buf *byte)
+JNIEnvGetByteField	refs/android.go	2053;"	f	access:public	line:2053	signature:(env *JNIEnv, obj Jobject, id JfieldID)	type:Jbyte
+JNIEnvGetCharArrayElements	refs/android.go	2709;"	f	access:public	line:2709	signature:(env *JNIEnv, arr *JcharArray, isCopy *byte)	type:*Jchar
+JNIEnvGetCharArrayRegion	refs/android.go	2861;"	f	access:public	line:2861	signature:(env *JNIEnv, arr *JcharArray, start int32, length int32, buf *uint16)
+JNIEnvGetCharField	refs/android.go	2063;"	f	access:public	line:2063	signature:(env *JNIEnv, obj Jobject, id JfieldID)	type:Jchar
+JNIEnvGetDirectBufferAddress	refs/android.go	3139;"	f	access:public	line:3139	signature:(env *JNIEnv, buf Jobject)	type:unsafe.Pointer
+JNIEnvGetDirectBufferCapacity	refs/android.go	3148;"	f	access:public	line:3148	signature:(env *JNIEnv, buf Jobject)	type:Jlong
+JNIEnvGetDoubleArrayElements	refs/android.go	2759;"	f	access:public	line:2759	signature:(env *JNIEnv, arr *JdoubleArray, isCopy *byte)	type:*Jdouble
+JNIEnvGetDoubleArrayRegion	refs/android.go	2911;"	f	access:public	line:2911	signature:(env *JNIEnv, arr *JdoubleArray, start int32, length int32, buf *float64)
+JNIEnvGetDoubleField	refs/android.go	2113;"	f	access:public	line:2113	signature:(env *JNIEnv, obj Jobject, id JfieldID)	type:Jdouble
+JNIEnvGetFieldID	refs/android.go	2022;"	f	access:public	line:2022	signature:(env *JNIEnv, clazz *Jclass, name string, sig string)	type:JfieldID
+JNIEnvGetFloatArrayElements	refs/android.go	2749;"	f	access:public	line:2749	signature:(env *JNIEnv, arr *JfloatArray, isCopy *byte)	type:*Jfloat
+JNIEnvGetFloatArrayRegion	refs/android.go	2901;"	f	access:public	line:2901	signature:(env *JNIEnv, arr *JfloatArray, start int32, length int32, buf *float32)
+JNIEnvGetFloatField	refs/android.go	2103;"	f	access:public	line:2103	signature:(env *JNIEnv, obj Jobject, id JfieldID)	type:Jfloat
+JNIEnvGetIntArrayElements	refs/android.go	2729;"	f	access:public	line:2729	signature:(env *JNIEnv, arr *JintArray, isCopy *byte)	type:*Jint
+JNIEnvGetIntArrayRegion	refs/android.go	2881;"	f	access:public	line:2881	signature:(env *JNIEnv, arr *JintArray, start int32, length int32, buf *int32)
+JNIEnvGetIntField	refs/android.go	2083;"	f	access:public	line:2083	signature:(env *JNIEnv, obj Jobject, id JfieldID)	type:Jint
+JNIEnvGetJavaVM	refs/android.go	3039;"	f	access:public	line:3039	signature:(env *JNIEnv, pVm **JavaVM)	type:Jint
+JNIEnvGetLongArrayElements	refs/android.go	2739;"	f	access:public	line:2739	signature:(env *JNIEnv, arr *JlongArray, isCopy *byte)	type:*Jlong
+JNIEnvGetLongArrayRegion	refs/android.go	2891;"	f	access:public	line:2891	signature:(env *JNIEnv, arr *JlongArray, start int32, length int32, buf *int64)
+JNIEnvGetLongField	refs/android.go	2093;"	f	access:public	line:2093	signature:(env *JNIEnv, obj Jobject, id JfieldID)	type:Jlong
+JNIEnvGetMethodID	refs/android.go	1785;"	f	access:public	line:1785	signature:(env *JNIEnv, clazz *Jclass, name string, sig string)	type:JmethodID
+JNIEnvGetObjectArrayElement	refs/android.go	2598;"	f	access:public	line:2598	signature:(env *JNIEnv, arr *JobjectArray, index int32)	type:Jobject
+JNIEnvGetObjectClass	refs/android.go	1766;"	f	access:public	line:1766	signature:(env *JNIEnv, obj Jobject)	type:*Jclass
+JNIEnvGetObjectField	refs/android.go	2033;"	f	access:public	line:2033	signature:(env *JNIEnv, obj Jobject, id JfieldID)	type:Jobject
+JNIEnvGetObjectRefType	refs/android.go	3157;"	f	access:public	line:3157	signature:(env *JNIEnv, obj Jobject)	type:JobjectRefType
+JNIEnvGetPrimitiveArrayCritical	refs/android.go	3068;"	f	access:public	line:3068	signature:(env *JNIEnv, arr Jarray, isCopy *byte)	type:unsafe.Pointer
+JNIEnvGetShortArrayElements	refs/android.go	2719;"	f	access:public	line:2719	signature:(env *JNIEnv, arr *JshortArray, isCopy *byte)	type:*Jshort
+JNIEnvGetShortArrayRegion	refs/android.go	2871;"	f	access:public	line:2871	signature:(env *JNIEnv, arr *JshortArray, start int32, length int32, buf *int16)
+JNIEnvGetShortField	refs/android.go	2073;"	f	access:public	line:2073	signature:(env *JNIEnv, obj Jobject, id JfieldID)	type:Jshort
+JNIEnvGetStaticBooleanField	refs/android.go	2344;"	f	access:public	line:2344	signature:(env *JNIEnv, clazz *Jclass, id JfieldID)	type:Jboolean
+JNIEnvGetStaticByteField	refs/android.go	2354;"	f	access:public	line:2354	signature:(env *JNIEnv, clazz *Jclass, id JfieldID)	type:Jbyte
+JNIEnvGetStaticCharField	refs/android.go	2364;"	f	access:public	line:2364	signature:(env *JNIEnv, clazz *Jclass, id JfieldID)	type:Jchar
+JNIEnvGetStaticDoubleField	refs/android.go	2414;"	f	access:public	line:2414	signature:(env *JNIEnv, clazz *Jclass, id JfieldID)	type:Jdouble
+JNIEnvGetStaticFieldID	refs/android.go	2323;"	f	access:public	line:2323	signature:(env *JNIEnv, clazz *Jclass, name string, sig string)	type:JfieldID
+JNIEnvGetStaticFloatField	refs/android.go	2404;"	f	access:public	line:2404	signature:(env *JNIEnv, clazz *Jclass, id JfieldID)	type:Jfloat
+JNIEnvGetStaticIntField	refs/android.go	2384;"	f	access:public	line:2384	signature:(env *JNIEnv, clazz *Jclass, id JfieldID)	type:Jint
+JNIEnvGetStaticLongField	refs/android.go	2394;"	f	access:public	line:2394	signature:(env *JNIEnv, clazz *Jclass, id JfieldID)	type:Jlong
+JNIEnvGetStaticMethodID	refs/android.go	2204;"	f	access:public	line:2204	signature:(env *JNIEnv, clazz *Jclass, name string, sig string)	type:JmethodID
+JNIEnvGetStaticObjectField	refs/android.go	2334;"	f	access:public	line:2334	signature:(env *JNIEnv, clazz *Jclass, id JfieldID)	type:Jobject
+JNIEnvGetStaticShortField	refs/android.go	2374;"	f	access:public	line:2374	signature:(env *JNIEnv, clazz *Jclass, id JfieldID)	type:Jshort
+JNIEnvGetStringChars	refs/android.go	2524;"	f	access:public	line:2524	signature:(env *JNIEnv, str *Jstring, isCopy *byte)	type:*Jchar
+JNIEnvGetStringCritical	refs/android.go	3087;"	f	access:public	line:3087	signature:(env *JNIEnv, str *Jstring, isCopy *byte)	type:*Jchar
+JNIEnvGetStringLength	refs/android.go	2515;"	f	access:public	line:2515	signature:(env *JNIEnv, str *Jstring)	type:Jsize
+JNIEnvGetStringRegion	refs/android.go	3048;"	f	access:public	line:3048	signature:(env *JNIEnv, str *Jstring, start int32, length int32, buf *uint16)
+JNIEnvGetStringUTFChars	refs/android.go	2560;"	f	access:public	line:2560	signature:(env *JNIEnv, str *Jstring, isCopy *byte)	type:string
+JNIEnvGetStringUTFLength	refs/android.go	2551;"	f	access:public	line:2551	signature:(env *JNIEnv, str *Jstring)	type:Jsize
+JNIEnvGetStringUTFRegion	refs/android.go	3058;"	f	access:public	line:3058	signature:(env *JNIEnv, str *Jstring, start int32, length int32, buf *byte)
+JNIEnvGetSuperclass	refs/android.go	1601;"	f	access:public	line:1601	signature:(env *JNIEnv, clazz *Jclass)	type:*Jclass
+JNIEnvGetVersion	refs/android.go	1543;"	f	access:public	line:1543	signature:(env *JNIEnv)	type:Jint
+JNIEnvIsAssignableFrom	refs/android.go	1610;"	f	access:public	line:1610	signature:(env *JNIEnv, clazz1 *Jclass, clazz2 *Jclass)	type:Jboolean
+JNIEnvIsInstanceOf	refs/android.go	1775;"	f	access:public	line:1775	signature:(env *JNIEnv, obj Jobject, clazz *Jclass)	type:Jboolean
+JNIEnvIsSameObject	refs/android.go	1718;"	f	access:public	line:1718	signature:(env *JNIEnv, ref1 Jobject, ref2 Jobject)	type:Jboolean
+JNIEnvMonitorEnter	refs/android.go	3021;"	f	access:public	line:3021	signature:(env *JNIEnv, obj Jobject)	type:Jint
+JNIEnvMonitorExit	refs/android.go	3030;"	f	access:public	line:3030	signature:(env *JNIEnv, obj Jobject)	type:Jint
+JNIEnvNewBooleanArray	refs/android.go	2617;"	f	access:public	line:2617	signature:(env *JNIEnv, length int32)	type:*JbooleanArray
+JNIEnvNewByteArray	refs/android.go	2626;"	f	access:public	line:2626	signature:(env *JNIEnv, length int32)	type:*JbyteArray
+JNIEnvNewCharArray	refs/android.go	2635;"	f	access:public	line:2635	signature:(env *JNIEnv, length int32)	type:*JcharArray
+JNIEnvNewDirectByteBuffer	refs/android.go	3129;"	f	access:public	line:3129	signature:(env *JNIEnv, buf unsafe.Pointer, capacity int64)	type:Jobject
+JNIEnvNewDoubleArray	refs/android.go	2680;"	f	access:public	line:2680	signature:(env *JNIEnv, length int32)	type:*JdoubleArray
+JNIEnvNewFloatArray	refs/android.go	2671;"	f	access:public	line:2671	signature:(env *JNIEnv, length int32)	type:*JfloatArray
+JNIEnvNewGlobalRef	refs/android.go	1695;"	f	access:public	line:1695	signature:(env *JNIEnv, ref Jobject)	type:Jobject
+JNIEnvNewIntArray	refs/android.go	2653;"	f	access:public	line:2653	signature:(env *JNIEnv, length int32)	type:*JintArray
+JNIEnvNewLocalRef	refs/android.go	1728;"	f	access:public	line:1728	signature:(env *JNIEnv, obj Jobject)	type:Jobject
+JNIEnvNewLongArray	refs/android.go	2662;"	f	access:public	line:2662	signature:(env *JNIEnv, length int32)	type:*JlongArray
+JNIEnvNewObject	refs/android.go	1755;"	f	access:public	line:1755	signature:(env *JNIEnv, clazz *Jclass, id JmethodID, args []Jvalue)	type:Jobject
+JNIEnvNewObjectArray	refs/android.go	2587;"	f	access:public	line:2587	signature:(env *JNIEnv, length int32, clazz *Jclass, obj Jobject)	type:*JobjectArray
+JNIEnvNewShortArray	refs/android.go	2644;"	f	access:public	line:2644	signature:(env *JNIEnv, length int32)	type:*JshortArray
+JNIEnvNewString	refs/android.go	2505;"	f	access:public	line:2505	signature:(env *JNIEnv, buf *uint16, bufLen int32)	type:*Jstring
+JNIEnvNewStringUTF	refs/android.go	2542;"	f	access:public	line:2542	signature:(env *JNIEnv, str string)	type:*Jstring
+JNIEnvNewWeakGlobalRef	refs/android.go	3105;"	f	access:public	line:3105	signature:(env *JNIEnv, obj Jobject)	type:*Jweak
+JNIEnvPopLocalFrame	refs/android.go	1686;"	f	access:public	line:1686	signature:(env *JNIEnv, obj Jobject)	type:Jobject
+JNIEnvPushLocalFrame	refs/android.go	1677;"	f	access:public	line:1677	signature:(env *JNIEnv, capacity int32)	type:Jint
+JNIEnvRegisterNatives	refs/android.go	3001;"	f	access:public	line:3001	signature:(env *JNIEnv, clazz *Jclass, methods *JNINativeMethod, nMethods int32)	type:Jint
+JNIEnvReleaseBooleanArrayElements	refs/android.go	2769;"	f	access:public	line:2769	signature:(env *JNIEnv, arr *JbooleanArray, elems *byte, mode int32)
+JNIEnvReleaseByteArrayElements	refs/android.go	2778;"	f	access:public	line:2778	signature:(env *JNIEnv, arr *JbyteArray, elems *byte, mode int32)
+JNIEnvReleaseCharArrayElements	refs/android.go	2787;"	f	access:public	line:2787	signature:(env *JNIEnv, arr *JcharArray, elems *uint16, mode int32)
+JNIEnvReleaseDoubleArrayElements	refs/android.go	2832;"	f	access:public	line:2832	signature:(env *JNIEnv, arr *JdoubleArray, elems *float64, mode int32)
+JNIEnvReleaseFloatArrayElements	refs/android.go	2823;"	f	access:public	line:2823	signature:(env *JNIEnv, arr *JfloatArray, elems *float32, mode int32)
+JNIEnvReleaseIntArrayElements	refs/android.go	2805;"	f	access:public	line:2805	signature:(env *JNIEnv, arr *JintArray, elems *int32, mode int32)
+JNIEnvReleaseLongArrayElements	refs/android.go	2814;"	f	access:public	line:2814	signature:(env *JNIEnv, arr *JlongArray, elems *int64, mode int32)
+JNIEnvReleasePrimitiveArrayCritical	refs/android.go	3078;"	f	access:public	line:3078	signature:(env *JNIEnv, arr Jarray, carray unsafe.Pointer, mode int32)
+JNIEnvReleaseShortArrayElements	refs/android.go	2796;"	f	access:public	line:2796	signature:(env *JNIEnv, arr *JshortArray, elems *int16, mode int32)
+JNIEnvReleaseStringChars	refs/android.go	2534;"	f	access:public	line:2534	signature:(env *JNIEnv, str *Jstring, chars *uint16)
+JNIEnvReleaseStringCritical	refs/android.go	3097;"	f	access:public	line:3097	signature:(env *JNIEnv, str *Jstring, carray *uint16)
+JNIEnvReleaseStringUTFChars	refs/android.go	2570;"	f	access:public	line:2570	signature:(env *JNIEnv, str *Jstring, utf string)
+JNIEnvSetBooleanArrayRegion	refs/android.go	2921;"	f	access:public	line:2921	signature:(env *JNIEnv, arr *JbooleanArray, start int32, length int32, buf *byte)
+JNIEnvSetBooleanField	refs/android.go	2132;"	f	access:public	line:2132	signature:(env *JNIEnv, obj Jobject, id JfieldID, val byte)
+JNIEnvSetByteArrayRegion	refs/android.go	2931;"	f	access:public	line:2931	signature:(env *JNIEnv, arr *JbyteArray, start int32, length int32, buf *byte)
+JNIEnvSetByteField	refs/android.go	2141;"	f	access:public	line:2141	signature:(env *JNIEnv, obj Jobject, id JfieldID, val byte)
+JNIEnvSetCharArrayRegion	refs/android.go	2941;"	f	access:public	line:2941	signature:(env *JNIEnv, arr *JcharArray, start int32, length int32, buf *uint16)
+JNIEnvSetCharField	refs/android.go	2150;"	f	access:public	line:2150	signature:(env *JNIEnv, obj Jobject, id JfieldID, val uint16)
+JNIEnvSetDoubleArrayRegion	refs/android.go	2991;"	f	access:public	line:2991	signature:(env *JNIEnv, arr *JdoubleArray, start int32, length int32, buf *float64)
+JNIEnvSetDoubleField	refs/android.go	2195;"	f	access:public	line:2195	signature:(env *JNIEnv, obj Jobject, id JfieldID, val float64)
+JNIEnvSetFloatArrayRegion	refs/android.go	2981;"	f	access:public	line:2981	signature:(env *JNIEnv, arr *JfloatArray, start int32, length int32, buf *float32)
+JNIEnvSetFloatField	refs/android.go	2186;"	f	access:public	line:2186	signature:(env *JNIEnv, obj Jobject, id JfieldID, val float32)
+JNIEnvSetIntArrayRegion	refs/android.go	2961;"	f	access:public	line:2961	signature:(env *JNIEnv, arr *JintArray, start int32, length int32, buf *int32)
+JNIEnvSetIntField	refs/android.go	2168;"	f	access:public	line:2168	signature:(env *JNIEnv, obj Jobject, id JfieldID, val int32)
+JNIEnvSetLongArrayRegion	refs/android.go	2971;"	f	access:public	line:2971	signature:(env *JNIEnv, arr *JlongArray, start int32, length int32, buf *int64)
+JNIEnvSetLongField	refs/android.go	2177;"	f	access:public	line:2177	signature:(env *JNIEnv, obj Jobject, id JfieldID, val int64)
+JNIEnvSetObjectArrayElement	refs/android.go	2608;"	f	access:public	line:2608	signature:(env *JNIEnv, arr *JobjectArray, index int32, obj Jobject)
+JNIEnvSetObjectField	refs/android.go	2123;"	f	access:public	line:2123	signature:(env *JNIEnv, obj Jobject, id JfieldID, val Jobject)
+JNIEnvSetShortArrayRegion	refs/android.go	2951;"	f	access:public	line:2951	signature:(env *JNIEnv, arr *JshortArray, start int32, length int32, buf *int16)
+JNIEnvSetShortField	refs/android.go	2159;"	f	access:public	line:2159	signature:(env *JNIEnv, obj Jobject, id JfieldID, val int16)
+JNIEnvSetStaticBooleanField	refs/android.go	2433;"	f	access:public	line:2433	signature:(env *JNIEnv, clazz *Jclass, id JfieldID, val byte)
+JNIEnvSetStaticByteField	refs/android.go	2442;"	f	access:public	line:2442	signature:(env *JNIEnv, clazz *Jclass, id JfieldID, val byte)
+JNIEnvSetStaticCharField	refs/android.go	2451;"	f	access:public	line:2451	signature:(env *JNIEnv, clazz *Jclass, id JfieldID, val uint16)
+JNIEnvSetStaticDoubleField	refs/android.go	2496;"	f	access:public	line:2496	signature:(env *JNIEnv, clazz *Jclass, id JfieldID, val float64)
+JNIEnvSetStaticFloatField	refs/android.go	2487;"	f	access:public	line:2487	signature:(env *JNIEnv, clazz *Jclass, id JfieldID, val float32)
+JNIEnvSetStaticIntField	refs/android.go	2469;"	f	access:public	line:2469	signature:(env *JNIEnv, clazz *Jclass, id JfieldID, val int32)
+JNIEnvSetStaticLongField	refs/android.go	2478;"	f	access:public	line:2478	signature:(env *JNIEnv, clazz *Jclass, id JfieldID, val int64)
+JNIEnvSetStaticObjectField	refs/android.go	2424;"	f	access:public	line:2424	signature:(env *JNIEnv, clazz *Jclass, id JfieldID, val Jobject)
+JNIEnvSetStaticShortField	refs/android.go	2460;"	f	access:public	line:2460	signature:(env *JNIEnv, clazz *Jclass, id JfieldID, val int16)
+JNIEnvThrow	refs/android.go	1631;"	f	access:public	line:1631	signature:(env *JNIEnv, ex *Jthrowable)	type:Jint
+JNIEnvThrowNew	refs/android.go	1640;"	f	access:public	line:1640	signature:(env *JNIEnv, clazz *Jclass, msg string)	type:Jint
+JNIEnvToReflectedField	refs/android.go	1620;"	f	access:public	line:1620	signature:(env *JNIEnv, clazz *Jclass, id JfieldID, isStatic byte)	type:Jobject
+JNIEnvToReflectedMethod	refs/android.go	1590;"	f	access:public	line:1590	signature:(env *JNIEnv, clazz *Jclass, id JmethodID, isStatic byte)	type:Jobject
+JNIEnvUnregisterNatives	refs/android.go	3012;"	f	access:public	line:3012	signature:(env *JNIEnv, clazz *Jclass)	type:Jint
+JNIGetEnv	refs/android.go	1523;"	f	access:public	line:1523	signature:(vm *JavaVM, pEnv **JNIEnv, version int32)	type:Jint
+KeyEventGetAction	refs/android.go	686;"	f	access:public	line:686	signature:(keyEvent *InputEvent)	type:int32
+KeyEventGetDownTime	refs/android.go	734;"	f	access:public	line:734	signature:(keyEvent *InputEvent)	type:int64
+KeyEventGetEventTime	refs/android.go	742;"	f	access:public	line:742	signature:(keyEvent *InputEvent)	type:int64
+KeyEventGetFlags	refs/android.go	694;"	f	access:public	line:694	signature:(keyEvent *InputEvent)	type:int32
+KeyEventGetKeyCode	refs/android.go	702;"	f	access:public	line:702	signature:(keyEvent *InputEvent)	type:int32
+KeyEventGetMetaState	refs/android.go	718;"	f	access:public	line:718	signature:(keyEvent *InputEvent)	type:int32
+KeyEventGetRepeatCount	refs/android.go	726;"	f	access:public	line:726	signature:(keyEvent *InputEvent)	type:int32
+KeyEventGetScanCode	refs/android.go	710;"	f	access:public	line:710	signature:(keyEvent *InputEvent)	type:int32
+LogWrite	refs/android.go	540;"	f	access:public	line:540	signature:(prio int32, tag string, text string)	type:int32
+LooperAcquire	refs/android.go	565;"	f	access:public	line:565	signature:(looper *Looper)
+LooperAddFd	refs/android.go	605;"	f	access:public	line:605	signature:(looper *Looper, fd int32, ident int32, events int32, callback LooperCallbackFunc, data unsafe.Pointer)	type:int32
+LooperForThread	refs/android.go	550;"	f	access:public	line:550	signature:()	type:*Looper
+LooperPollAll	refs/android.go	588;"	f	access:public	line:588	signature:(timeoutMillis int32, outFd *int32, outEvents *int32, outData []unsafe.Pointer)	type:int32
+LooperPollOnce	refs/android.go	577;"	f	access:public	line:577	signature:(timeoutMillis int32, outFd *int32, outEvents *int32, outData []unsafe.Pointer)	type:int32
+LooperPrepare	refs/android.go	557;"	f	access:public	line:557	signature:(opts int32)	type:*Looper
+LooperRelease	refs/android.go	571;"	f	access:public	line:571	signature:(looper *Looper)
+LooperRemoveFd	refs/android.go	618;"	f	access:public	line:618	signature:(looper *Looper, fd int32)	type:int32
+LooperWake	refs/android.go	599;"	f	access:public	line:599	signature:(looper *Looper)
+ModTime	android/fonts/dejavu.go	81;"	m	access:public	ctype:bindataFileInfo	line:81	signature:()	type:time.Time
+ModTime	refs/nk-android/bindata.go	62;"	m	access:public	ctype:bindataFileInfo	line:62	signature:()	type:time.Time
+Mode	android/fonts/dejavu.go	78;"	m	access:public	ctype:bindataFileInfo	line:78	signature:()	type:os.FileMode
+Mode	refs/nk-android/bindata.go	59;"	m	access:public	ctype:bindataFileInfo	line:59	signature:()	type:os.FileMode
+MotionEventGetAction	refs/android.go	750;"	f	access:public	line:750	signature:(motionEvent *InputEvent)	type:int32
+MotionEventGetAxisValue	refs/android.go	963;"	f	access:public	line:963	signature:(motionEvent *InputEvent, axis int32, pointerIndex uint32)	type:float32
+MotionEventGetButtonState	refs/android.go	774;"	f	access:public	line:774	signature:(motionEvent *InputEvent)	type:int32
+MotionEventGetDownTime	refs/android.go	790;"	f	access:public	line:790	signature:(motionEvent *InputEvent)	type:int64
+MotionEventGetEdgeFlags	refs/android.go	782;"	f	access:public	line:782	signature:(motionEvent *InputEvent)	type:int32
+MotionEventGetEventTime	refs/android.go	798;"	f	access:public	line:798	signature:(motionEvent *InputEvent)	type:int64
+MotionEventGetFlags	refs/android.go	758;"	f	access:public	line:758	signature:(motionEvent *InputEvent)	type:int32
+MotionEventGetHistoricalAxisValue	refs/android.go	1100;"	f	access:public	line:1100	signature:(motionEvent *InputEvent, axis int32, pointerIndex uint32, historyIndex uint32)	type:float32
+MotionEventGetHistoricalEventTime	refs/android.go	981;"	f	access:public	line:981	signature:(motionEvent *InputEvent, historyIndex uint32)	type:int64
+MotionEventGetHistoricalOrientation	refs/android.go	1090;"	f	access:public	line:1090	signature:(motionEvent *InputEvent, pointerIndex uint32, historyIndex uint32)	type:float32
+MotionEventGetHistoricalPressure	refs/android.go	1030;"	f	access:public	line:1030	signature:(motionEvent *InputEvent, pointerIndex uint32, historyIndex uint32)	type:float32
+MotionEventGetHistoricalRawX	refs/android.go	990;"	f	access:public	line:990	signature:(motionEvent *InputEvent, pointerIndex uint32, historyIndex uint32)	type:float32
+MotionEventGetHistoricalRawY	refs/android.go	1000;"	f	access:public	line:1000	signature:(motionEvent *InputEvent, pointerIndex uint32, historyIndex uint32)	type:float32
+MotionEventGetHistoricalSize	refs/android.go	1040;"	f	access:public	line:1040	signature:(motionEvent *InputEvent, pointerIndex uint32, historyIndex uint32)	type:float32
+MotionEventGetHistoricalToolMajor	refs/android.go	1070;"	f	access:public	line:1070	signature:(motionEvent *InputEvent, pointerIndex uint32, historyIndex uint32)	type:float32
+MotionEventGetHistoricalToolMinor	refs/android.go	1080;"	f	access:public	line:1080	signature:(motionEvent *InputEvent, pointerIndex uint32, historyIndex uint32)	type:float32
+MotionEventGetHistoricalTouchMajor	refs/android.go	1050;"	f	access:public	line:1050	signature:(motionEvent *InputEvent, pointerIndex uint32, historyIndex uint32)	type:float32
+MotionEventGetHistoricalTouchMinor	refs/android.go	1060;"	f	access:public	line:1060	signature:(motionEvent *InputEvent, pointerIndex uint32, historyIndex uint32)	type:float32
+MotionEventGetHistoricalX	refs/android.go	1010;"	f	access:public	line:1010	signature:(motionEvent *InputEvent, pointerIndex uint32, historyIndex uint32)	type:float32
+MotionEventGetHistoricalY	refs/android.go	1020;"	f	access:public	line:1020	signature:(motionEvent *InputEvent, pointerIndex uint32, historyIndex uint32)	type:float32
+MotionEventGetHistorySize	refs/android.go	973;"	f	access:public	line:973	signature:(motionEvent *InputEvent)	type:uint32
+MotionEventGetMetaState	refs/android.go	766;"	f	access:public	line:766	signature:(motionEvent *InputEvent)	type:int32
+MotionEventGetOrientation	refs/android.go	954;"	f	access:public	line:954	signature:(motionEvent *InputEvent, pointerIndex uint32)	type:float32
+MotionEventGetPointerCount	refs/android.go	838;"	f	access:public	line:838	signature:(motionEvent *InputEvent)	type:uint32
+MotionEventGetPointerId	refs/android.go	846;"	f	access:public	line:846	signature:(motionEvent *InputEvent, pointerIndex uint32)	type:int32
+MotionEventGetPressure	refs/android.go	900;"	f	access:public	line:900	signature:(motionEvent *InputEvent, pointerIndex uint32)	type:float32
+MotionEventGetRawX	refs/android.go	864;"	f	access:public	line:864	signature:(motionEvent *InputEvent, pointerIndex uint32)	type:float32
+MotionEventGetRawY	refs/android.go	873;"	f	access:public	line:873	signature:(motionEvent *InputEvent, pointerIndex uint32)	type:float32
+MotionEventGetSize	refs/android.go	909;"	f	access:public	line:909	signature:(motionEvent *InputEvent, pointerIndex uint32)	type:float32
+MotionEventGetToolMajor	refs/android.go	936;"	f	access:public	line:936	signature:(motionEvent *InputEvent, pointerIndex uint32)	type:float32
+MotionEventGetToolMinor	refs/android.go	945;"	f	access:public	line:945	signature:(motionEvent *InputEvent, pointerIndex uint32)	type:float32
+MotionEventGetToolType	refs/android.go	855;"	f	access:public	line:855	signature:(motionEvent *InputEvent, pointerIndex uint32)	type:int32
+MotionEventGetTouchMajor	refs/android.go	918;"	f	access:public	line:918	signature:(motionEvent *InputEvent, pointerIndex uint32)	type:float32
+MotionEventGetTouchMinor	refs/android.go	927;"	f	access:public	line:927	signature:(motionEvent *InputEvent, pointerIndex uint32)	type:float32
+MotionEventGetX	refs/android.go	882;"	f	access:public	line:882	signature:(motionEvent *InputEvent, pointerIndex uint32)	type:float32
+MotionEventGetXOffset	refs/android.go	806;"	f	access:public	line:806	signature:(motionEvent *InputEvent)	type:float32
+MotionEventGetXPrecision	refs/android.go	822;"	f	access:public	line:822	signature:(motionEvent *InputEvent)	type:float32
+MotionEventGetY	refs/android.go	891;"	f	access:public	line:891	signature:(motionEvent *InputEvent, pointerIndex uint32)	type:float32
+MotionEventGetYOffset	refs/android.go	814;"	f	access:public	line:814	signature:(motionEvent *InputEvent)	type:float32
+MotionEventGetYPrecision	refs/android.go	830;"	f	access:public	line:830	signature:(motionEvent *InputEvent)	type:float32
+MustAsset	android/fonts/dejavu.go	528;"	f	access:public	line:528	signature:(name string)	type:[]byte
+MustAsset	refs/nk-android/bindata.go	129;"	f	access:public	line:129	signature:(name string)	type:[]byte
+Name	android/fonts/dejavu.go	72;"	m	access:public	ctype:bindataFileInfo	line:72	signature:()	type:string
+Name	refs/nk-android/bindata.go	53;"	m	access:public	ctype:bindataFileInfo	line:53	signature:()	type:string
+NativeActivityFinish	refs/android.go	627;"	f	access:public	line:627	signature:(activity *NativeActivity)
+NativeActivityHideSoftInput	refs/android.go	655;"	f	access:public	line:655	signature:(activity *NativeActivity, flags uint32)
+NativeActivitySetWindowFlags	refs/android.go	640;"	f	access:public	line:640	signature:(activity *NativeActivity, addFlags uint32, removeFlags uint32)
+NativeActivitySetWindowFormat	refs/android.go	633;"	f	access:public	line:633	signature:(activity *NativeActivity, format int32)
+NativeActivityShowSoftInput	refs/android.go	648;"	f	access:public	line:648	signature:(activity *NativeActivity, flags uint32)
+NativeWindowAcquire	refs/android.go	1161;"	f	access:public	line:1161	signature:(window *NativeWindow)
+NativeWindowFromSurface	refs/android.go	1226;"	f	access:public	line:1226	signature:(env *JNIEnv, surface Jobject)	type:*NativeWindow
+NativeWindowGetFormat	refs/android.go	1189;"	f	access:public	line:1189	signature:(window *NativeWindow)	type:int32
+NativeWindowGetHeight	refs/android.go	1181;"	f	access:public	line:1181	signature:(window *NativeWindow)	type:int32
+NativeWindowGetWidth	refs/android.go	1173;"	f	access:public	line:1173	signature:(window *NativeWindow)	type:int32
+NativeWindowLock	refs/android.go	1208;"	f	access:public	line:1208	signature:(window *NativeWindow, outBuffer *NativeWindowBuffer, inOutDirtyBounds *Rect)	type:int32
+NativeWindowRelease	refs/android.go	1167;"	f	access:public	line:1167	signature:(window *NativeWindow)
+NativeWindowSetBuffersGeometry	refs/android.go	1197;"	f	access:public	line:1197	signature:(window *NativeWindow, width int32, height int32, format int32)	type:int32
+NativeWindowUnlockAndPost	refs/android.go	1218;"	f	access:public	line:1218	signature:(window *NativeWindow)	type:int32
+NewSensorMan	refs/example-egl/sensor.go	29;"	f	access:public	ctype:SensorMan	line:29	signature:(refresh time.Duration, handler func(event *android.SensorEvent))	type:*SensorMan
+ObbInfoDelete	refs/android.go	1243;"	f	access:public	line:1243	signature:(obbInfo *ObbInfo)
+ObbInfoGetFlags	refs/android.go	1265;"	f	access:public	line:1265	signature:(obbInfo *ObbInfo)	type:int32
+ObbInfoGetPackageName	refs/android.go	1249;"	f	access:public	line:1249	signature:(obbInfo *ObbInfo)	type:string
+ObbInfoGetVersion	refs/android.go	1257;"	f	access:public	line:1257	signature:(obbInfo *ObbInfo)	type:int32
+ObbScannerGetObbInfo	refs/android.go	1235;"	f	access:public	line:1235	signature:(filename string)	type:*ObbInfo
+Option	refs/nk-android/main.go	262;"	t	access:public	line:262	type:uint8
+RestoreAsset	android/fonts/dejavu.go	650;"	f	access:public	line:650	signature:(dir, name string)	type:error
+RestoreAsset	refs/nk-android/bindata.go	215;"	f	access:public	line:215	signature:(dir, name string)	type:error
+RestoreAssets	android/fonts/dejavu.go	675;"	f	access:public	line:675	signature:(dir, name string)	type:error
+RestoreAssets	refs/nk-android/bindata.go	240;"	f	access:public	line:240	signature:(dir, name string)	type:error
+SensorEventQueueDisableSensor	refs/android.go	1329;"	f	access:public	line:1329	signature:(queue *SensorEventQueue, sensor *Sensor)	type:int32
+SensorEventQueueEnableSensor	refs/android.go	1320;"	f	access:public	line:1320	signature:(queue *SensorEventQueue, sensor *Sensor)	type:int32
+SensorEventQueueGetEvents	refs/android.go	1356;"	f	access:public	line:1356	signature:(queue *SensorEventQueue, events *SensorEvent, count uint32)	type:int32
+SensorEventQueueHasEvents	refs/android.go	1348;"	f	access:public	line:1348	signature:(queue *SensorEventQueue)	type:int32
+SensorEventQueueSetEventRate	refs/android.go	1338;"	f	access:public	line:1338	signature:(queue *SensorEventQueue, sensor *Sensor, usec int32)	type:int32
+SensorGetFifoMaxEventCount	refs/android.go	1406;"	f	access:public	line:1406	signature:(sensor *Sensor)	type:int32
+SensorGetFifoReservedEventCount	refs/android.go	1414;"	f	access:public	line:1414	signature:(sensor *Sensor)	type:int32
+SensorGetMinDelay	refs/android.go	1398;"	f	access:public	line:1398	signature:(sensor *Sensor)	type:int32
+SensorGetName	refs/android.go	1366;"	f	access:public	line:1366	signature:(sensor *Sensor)	type:string
+SensorGetReportingMode	refs/android.go	1430;"	f	access:public	line:1430	signature:(sensor *Sensor)	type:int32
+SensorGetResolution	refs/android.go	1390;"	f	access:public	line:1390	signature:(sensor *Sensor)	type:float32
+SensorGetStringType	refs/android.go	1422;"	f	access:public	line:1422	signature:(sensor *Sensor)	type:string
+SensorGetType	refs/android.go	1382;"	f	access:public	line:1382	signature:(sensor *Sensor)	type:int32
+SensorGetVendor	refs/android.go	1374;"	f	access:public	line:1374	signature:(sensor *Sensor)	type:string
+SensorIsWakeUpSensor	refs/android.go	1438;"	f	access:public	line:1438	signature:(sensor *Sensor)	type:bool
+SensorMan	refs/example-egl/sensor.go	11;"	t	access:public	line:11	type:struct
+SensorManagerCreateEventQueue	refs/android.go	1299;"	f	access:public	line:1299	signature:(manager *SensorManager, looper *Looper, ident int32, callback LooperCallbackFunc, data unsafe.Pointer)	type:*SensorEventQueue
+SensorManagerDestroyEventQueue	refs/android.go	1311;"	f	access:public	line:1311	signature:(manager *SensorManager, queue *SensorEventQueue)	type:int32
+SensorManagerGetDefaultSensor	refs/android.go	1280;"	f	access:public	line:1280	signature:(manager *SensorManager, kind int32)	type:*Sensor
+SensorManagerGetDefaultSensorEx	refs/android.go	1289;"	f	access:public	line:1289	signature:(manager *SensorManager, kind int32, wakeUp bool)	type:*Sensor
+SensorManagerGetInstance	refs/android.go	1273;"	f	access:public	line:1273	signature:()	type:*SensorManager
+Size	android/fonts/dejavu.go	75;"	m	access:public	ctype:bindataFileInfo	line:75	signature:()	type:int64
+Size	refs/nk-android/bindata.go	56;"	m	access:public	ctype:bindataFileInfo	line:56	signature:()	type:int64
+Start	refs/example-egl/sensor.go	91;"	m	access:public	ctype:SensorMan	line:91	signature:()
+State	refs/nk-android/main.go	269;"	t	access:public	line:269	type:struct
+Stop	refs/example-egl/sensor.go	98;"	m	access:public	ctype:SensorMan	line:98	signature:()
+StorageManagerDelete	refs/android.go	1453;"	f	access:public	line:1453	signature:(mgr *StorageManager)
+StorageManagerGetMountedObbPath	refs/android.go	1488;"	f	access:public	line:1488	signature:(mgr *StorageManager, filename string)	type:string
+StorageManagerIsObbMounted	refs/android.go	1479;"	f	access:public	line:1479	signature:(mgr *StorageManager, filename string)	type:int32
+StorageManagerMountObb	refs/android.go	1459;"	f	access:public	line:1459	signature:(mgr *StorageManager, filename string, key string, cb StorageManagerObbCallbackFunc, data unsafe.Pointer)
+StorageManagerNew	refs/android.go	1446;"	f	access:public	line:1446	signature:()	type:*StorageManager
+StorageManagerUnmountObb	refs/android.go	1469;"	f	access:public	line:1469	signature:(mgr *StorageManager, filename string, force int32, cb StorageManagerObbCallbackFunc, data unsafe.Pointer)
+Sys	android/fonts/dejavu.go	87;"	m	access:public	ctype:bindataFileInfo	line:87	signature:()	type:interface{}
+Sys	refs/nk-android/bindata.go	68;"	m	access:public	ctype:bindataFileInfo	line:68	signature:()	type:interface{}
+_assetsDroidsansTtf	refs/nk-android/bindata.go	92;"	v	access:private	line:92
+_assetsDs_store	refs/nk-android/bindata.go	72;"	v	access:private	line:72
+_bindata	android/fonts/dejavu.go	562;"	v	access:private	line:562
+_bindata	refs/nk-android/bindata.go	163;"	v	access:private	line:163
+_bintree	android/fonts/dejavu.go	625;"	v	access:private	line:625
+_bintree	refs/nk-android/bindata.go	207;"	v	access:private	line:207
+_dejavusansBoldTtf	android/fonts/dejavu.go	91;"	v	access:private	line:91
+_dejavusansBoldobliqueTtf	android/fonts/dejavu.go	111;"	v	access:private	line:111
+_dejavusansExtralightTtf	android/fonts/dejavu.go	131;"	v	access:private	line:131
+_dejavusansObliqueTtf	android/fonts/dejavu.go	151;"	v	access:private	line:151
+_dejavusansTtf	android/fonts/dejavu.go	171;"	v	access:private	line:171
+_dejavusanscondensedBoldTtf	android/fonts/dejavu.go	191;"	v	access:private	line:191
+_dejavusanscondensedBoldobliqueTtf	android/fonts/dejavu.go	211;"	v	access:private	line:211
+_dejavusanscondensedObliqueTtf	android/fonts/dejavu.go	231;"	v	access:private	line:231
+_dejavusanscondensedTtf	android/fonts/dejavu.go	251;"	v	access:private	line:251
+_dejavusansmonoBoldTtf	android/fonts/dejavu.go	271;"	v	access:private	line:271
+_dejavusansmonoBoldobliqueTtf	android/fonts/dejavu.go	291;"	v	access:private	line:291
+_dejavusansmonoObliqueTtf	android/fonts/dejavu.go	311;"	v	access:private	line:311
+_dejavusansmonoTtf	android/fonts/dejavu.go	331;"	v	access:private	line:331
+_dejavuserifBoldTtf	android/fonts/dejavu.go	351;"	v	access:private	line:351
+_dejavuserifBolditalicTtf	android/fonts/dejavu.go	371;"	v	access:private	line:371
+_dejavuserifItalicTtf	android/fonts/dejavu.go	391;"	v	access:private	line:391
+_dejavuserifTtf	android/fonts/dejavu.go	411;"	v	access:private	line:411
+_dejavuserifcondensedBoldTtf	android/fonts/dejavu.go	431;"	v	access:private	line:431
+_dejavuserifcondensedBolditalicTtf	android/fonts/dejavu.go	451;"	v	access:private	line:451
+_dejavuserifcondensedItalicTtf	android/fonts/dejavu.go	471;"	v	access:private	line:471
+_dejavuserifcondensedTtf	android/fonts/dejavu.go	491;"	v	access:private	line:491
+_filePath	android/fonts/dejavu.go	691;"	f	access:private	line:691	signature:(dir, name string)	type:string
+_filePath	refs/nk-android/bindata.go	256;"	f	access:private	line:256	signature:(dir, name string)	type:string
+accelerometer	refs/example-egl/sensor.go	18;"	w	access:private	ctype:SensorMan	line:18	type:*android.Sensor
+android	refs/android.go	6;"	p	line:6
+asset	android/fonts/dejavu.go	60;"	t	access:private	line:60	type:struct
+asset	refs/nk-android/bindata.go	41;"	t	access:private	line:41	type:struct
+assetsDroidsansTtf	refs/nk-android/bindata.go	101;"	f	access:private	ctype:asset	line:101	signature:()	type:*asset, error
+assetsDroidsansTtfBytes	refs/nk-android/bindata.go	94;"	f	access:private	line:94	signature:()	type:[]byte, error
+assetsDs_store	refs/nk-android/bindata.go	81;"	f	access:private	ctype:asset	line:81	signature:()	type:*asset, error
+assetsDs_storeBytes	refs/nk-android/bindata.go	74;"	f	access:private	line:74	signature:()	type:[]byte, error
+b	refs/nk-android/util.go	3;"	f	access:private	line:3	signature:(v int32)	type:bool
+bgColor	refs/nk-android/main.go	274;"	w	access:private	ctype:State	line:274	type:nk.Color
+bindataFileInfo	android/fonts/dejavu.go	65;"	t	access:private	line:65	type:struct
+bindataFileInfo	refs/nk-android/bindata.go	46;"	t	access:private	line:46	type:struct
+bindataRead	android/fonts/dejavu.go	40;"	f	access:private	line:40	signature:(data []byte, name string)	type:[]byte, error
+bindataRead	refs/nk-android/bindata.go	21;"	f	access:private	line:21	signature:(data []byte, name string)	type:[]byte, error
+bintree	android/fonts/dejavu.go	621;"	t	access:private	line:621	type:struct
+bintree	refs/nk-android/bindata.go	203;"	t	access:private	line:203	type:struct
+buffer	refs/nk-android/main.go	270;"	w	access:private	ctype:State	line:270	type:[]byte
+bytes	android/fonts/dejavu.go	29;"	i	line:29
+bytes	android/fonts/dejavu.go	61;"	w	access:private	ctype:asset	line:61	type:[]byte
+bytes	refs/nk-android/bindata.go	10;"	i	line:10
+bytes	refs/nk-android/bindata.go	42;"	w	access:private	ctype:asset	line:42	type:[]byte
+compress/gzip	android/fonts/dejavu.go	30;"	i	line:30
+compress/gzip	refs/nk-android/bindata.go	11;"	i	line:11
+dejavusansBoldTtf	android/fonts/dejavu.go	100;"	f	access:private	ctype:asset	line:100	signature:()	type:*asset, error
+dejavusansBoldTtfBytes	android/fonts/dejavu.go	93;"	f	access:private	line:93	signature:()	type:[]byte, error
+dejavusansBoldobliqueTtf	android/fonts/dejavu.go	120;"	f	access:private	ctype:asset	line:120	signature:()	type:*asset, error
+dejavusansBoldobliqueTtfBytes	android/fonts/dejavu.go	113;"	f	access:private	line:113	signature:()	type:[]byte, error
+dejavusansExtralightTtf	android/fonts/dejavu.go	140;"	f	access:private	ctype:asset	line:140	signature:()	type:*asset, error
+dejavusansExtralightTtfBytes	android/fonts/dejavu.go	133;"	f	access:private	line:133	signature:()	type:[]byte, error
+dejavusansObliqueTtf	android/fonts/dejavu.go	160;"	f	access:private	ctype:asset	line:160	signature:()	type:*asset, error
+dejavusansObliqueTtfBytes	android/fonts/dejavu.go	153;"	f	access:private	line:153	signature:()	type:[]byte, error
+dejavusansTtf	android/fonts/dejavu.go	180;"	f	access:private	ctype:asset	line:180	signature:()	type:*asset, error
+dejavusansTtfBytes	android/fonts/dejavu.go	173;"	f	access:private	line:173	signature:()	type:[]byte, error
+dejavusanscondensedBoldTtf	android/fonts/dejavu.go	200;"	f	access:private	ctype:asset	line:200	signature:()	type:*asset, error
+dejavusanscondensedBoldTtfBytes	android/fonts/dejavu.go	193;"	f	access:private	line:193	signature:()	type:[]byte, error
+dejavusanscondensedBoldobliqueTtf	android/fonts/dejavu.go	220;"	f	access:private	ctype:asset	line:220	signature:()	type:*asset, error
+dejavusanscondensedBoldobliqueTtfBytes	android/fonts/dejavu.go	213;"	f	access:private	line:213	signature:()	type:[]byte, error
+dejavusanscondensedObliqueTtf	android/fonts/dejavu.go	240;"	f	access:private	ctype:asset	line:240	signature:()	type:*asset, error
+dejavusanscondensedObliqueTtfBytes	android/fonts/dejavu.go	233;"	f	access:private	line:233	signature:()	type:[]byte, error
+dejavusanscondensedTtf	android/fonts/dejavu.go	260;"	f	access:private	ctype:asset	line:260	signature:()	type:*asset, error
+dejavusanscondensedTtfBytes	android/fonts/dejavu.go	253;"	f	access:private	line:253	signature:()	type:[]byte, error
+dejavusansmonoBoldTtf	android/fonts/dejavu.go	280;"	f	access:private	ctype:asset	line:280	signature:()	type:*asset, error
+dejavusansmonoBoldTtfBytes	android/fonts/dejavu.go	273;"	f	access:private	line:273	signature:()	type:[]byte, error
+dejavusansmonoBoldobliqueTtf	android/fonts/dejavu.go	300;"	f	access:private	ctype:asset	line:300	signature:()	type:*asset, error
+dejavusansmonoBoldobliqueTtfBytes	android/fonts/dejavu.go	293;"	f	access:private	line:293	signature:()	type:[]byte, error
+dejavusansmonoObliqueTtf	android/fonts/dejavu.go	320;"	f	access:private	ctype:asset	line:320	signature:()	type:*asset, error
+dejavusansmonoObliqueTtfBytes	android/fonts/dejavu.go	313;"	f	access:private	line:313	signature:()	type:[]byte, error
+dejavusansmonoTtf	android/fonts/dejavu.go	340;"	f	access:private	ctype:asset	line:340	signature:()	type:*asset, error
+dejavusansmonoTtfBytes	android/fonts/dejavu.go	333;"	f	access:private	line:333	signature:()	type:[]byte, error
+dejavuserifBoldTtf	android/fonts/dejavu.go	360;"	f	access:private	ctype:asset	line:360	signature:()	type:*asset, error
+dejavuserifBoldTtfBytes	android/fonts/dejavu.go	353;"	f	access:private	line:353	signature:()	type:[]byte, error
+dejavuserifBolditalicTtf	android/fonts/dejavu.go	380;"	f	access:private	ctype:asset	line:380	signature:()	type:*asset, error
+dejavuserifBolditalicTtfBytes	android/fonts/dejavu.go	373;"	f	access:private	line:373	signature:()	type:[]byte, error
+dejavuserifItalicTtf	android/fonts/dejavu.go	400;"	f	access:private	ctype:asset	line:400	signature:()	type:*asset, error
+dejavuserifItalicTtfBytes	android/fonts/dejavu.go	393;"	f	access:private	line:393	signature:()	type:[]byte, error
+dejavuserifTtf	android/fonts/dejavu.go	420;"	f	access:private	ctype:asset	line:420	signature:()	type:*asset, error
+dejavuserifTtfBytes	android/fonts/dejavu.go	413;"	f	access:private	line:413	signature:()	type:[]byte, error
+dejavuserifcondensedBoldTtf	android/fonts/dejavu.go	440;"	f	access:private	ctype:asset	line:440	signature:()	type:*asset, error
+dejavuserifcondensedBoldTtfBytes	android/fonts/dejavu.go	433;"	f	access:private	line:433	signature:()	type:[]byte, error
+dejavuserifcondensedBolditalicTtf	android/fonts/dejavu.go	460;"	f	access:private	ctype:asset	line:460	signature:()	type:*asset, error
+dejavuserifcondensedBolditalicTtfBytes	android/fonts/dejavu.go	453;"	f	access:private	line:453	signature:()	type:[]byte, error
+dejavuserifcondensedItalicTtf	android/fonts/dejavu.go	480;"	f	access:private	ctype:asset	line:480	signature:()	type:*asset, error
+dejavuserifcondensedItalicTtfBytes	android/fonts/dejavu.go	473;"	f	access:private	line:473	signature:()	type:[]byte, error
+dejavuserifcondensedTtf	android/fonts/dejavu.go	500;"	f	access:private	ctype:asset	line:500	signature:()	type:*asset, error
+dejavuserifcondensedTtfBytes	android/fonts/dejavu.go	493;"	f	access:private	line:493	signature:()	type:[]byte, error
+draw	refs/example-egl/main.go	124;"	f	access:private	line:124	signature:(handle *egl.DisplayHandle, x, y, z float32)
+filler	refs/nk-android/main.go	141;"	f	access:private	line:141	signature:(ctx *nk.Context, height float32)
+flag	refs/nk-android/util.go	7;"	f	access:private	line:7	signature:(v bool)	type:int32
+fmt	android/fonts/dejavu.go	31;"	i	line:31
+fmt	refs/nk-android/bindata.go	12;"	i	line:12
+fmt	refs/nk-android/main.go	4;"	i	line:4
+fonts	android/fonts/dejavu.go	26;"	p	line:26
+fonts	android/fonts/main.go	1;"	p	line:1
+gfxMain	refs/nk-android/main.go	146;"	f	access:private	line:146	signature:(activity *android.NativeActivity, ctx *nk.Context, state *State)
+github.com/golang-ui/nuklear/nk	refs/nk-android/main.go	9;"	i	line:9
+github.com/xlab/android-go/android	refs/example-egl/main.go	8;"	i	line:8
+github.com/xlab/android-go/android	refs/example-egl/sensor.go	8;"	i	line:8
+github.com/xlab/android-go/android	refs/nk-android/main.go	10;"	i	line:10
+github.com/xlab/android-go/app	refs/example-egl/main.go	9;"	i	line:9
+github.com/xlab/android-go/app	refs/minimal/main.go	7;"	i	line:7
+github.com/xlab/android-go/app	refs/nk-android/main.go	11;"	i	line:11
+github.com/xlab/android-go/egl	refs/example-egl/main.go	10;"	i	line:10
+github.com/xlab/android-go/gles	refs/example-egl/main.go	11;"	i	line:11
+github.com/xlab/android-go/gles3	refs/nk-android/main.go	12;"	i	line:12
+handler	refs/example-egl/sensor.go	12;"	w	access:private	ctype:SensorMan	line:12	type:func(event *android.SensorEvent)
+height	refs/nk-android/main.go	272;"	w	access:private	ctype:State	line:272	type:int
+info	android/fonts/dejavu.go	62;"	w	access:private	ctype:asset	line:62	type:os.FileInfo
+info	refs/nk-android/bindata.go	43;"	w	access:private	ctype:asset	line:43	type:os.FileInfo
+init	refs/example-egl/main.go	14;"	f	access:private	line:14	signature:()
+init	refs/minimal/main.go	10;"	f	access:private	line:10	signature:()
+init	refs/nk-android/main.go	15;"	f	access:private	line:15	signature:()
+initGL	refs/example-egl/main.go	117;"	f	access:private	line:117	signature:()
+initPt	refs/nk-android/main.go	26;"	f	access:private	line:26	signature:()
+io	android/fonts/dejavu.go	32;"	i	line:32
+io	refs/nk-android/bindata.go	13;"	i	line:13
+io/ioutil	android/fonts/dejavu.go	33;"	i	line:33
+io/ioutil	refs/nk-android/bindata.go	14;"	i	line:14
+kbShown	refs/nk-android/main.go	273;"	w	access:private	ctype:State	line:273	type:bool
+log	refs/example-egl/main.go	4;"	i	line:4
+log	refs/example-egl/sensor.go	4;"	i	line:4
+log	refs/minimal/main.go	4;"	i	line:4
+log	refs/nk-android/main.go	5;"	i	line:5
+loop	refs/example-egl/sensor.go	45;"	m	access:private	ctype:SensorMan	line:45	signature:()
+looper	refs/example-egl/sensor.go	19;"	w	access:private	ctype:SensorMan	line:19	type:*android.Looper
+main	refs/example-egl/main.go	18;"	f	access:private	line:18	signature:()
+main	refs/example-egl/main.go	1;"	p	line:1
+main	refs/example-egl/sensor.go	1;"	p	line:1
+main	refs/minimal/main.go	14;"	f	access:private	line:14	signature:()
+main	refs/minimal/main.go	1;"	p	line:1
+main	refs/nk-android/bindata.go	7;"	p	line:7
+main	refs/nk-android/main.go	1;"	p	line:1
+main	refs/nk-android/main.go	39;"	f	access:private	line:39	signature:()
+main	refs/nk-android/util.go	1;"	p	line:1
+maxElementBuffer	refs/nk-android/main.go	21;"	c	access:private	line:21
+maxVertexBuffer	refs/nk-android/main.go	20;"	c	access:private	line:20
+modTime	android/fonts/dejavu.go	69;"	w	access:private	ctype:bindataFileInfo	line:69	type:time.Time
+modTime	refs/nk-android/bindata.go	50;"	w	access:private	ctype:bindataFileInfo	line:50	type:time.Time
+mode	android/fonts/dejavu.go	68;"	w	access:private	ctype:bindataFileInfo	line:68	type:os.FileMode
+mode	refs/nk-android/bindata.go	49;"	w	access:private	ctype:bindataFileInfo	line:49	type:os.FileMode
+name	android/fonts/dejavu.go	66;"	w	access:private	ctype:bindataFileInfo	line:66	type:string
+name	refs/nk-android/bindata.go	47;"	w	access:private	ctype:bindataFileInfo	line:47	type:string
+opt	refs/nk-android/main.go	276;"	w	access:private	ctype:State	line:276	type:Option
+os	android/fonts/dejavu.go	34;"	i	line:34
+os	refs/nk-android/bindata.go	15;"	i	line:15
+path/filepath	android/fonts/dejavu.go	35;"	i	line:35
+path/filepath	refs/nk-android/bindata.go	16;"	i	line:16
+prop	refs/nk-android/main.go	275;"	w	access:private	ctype:State	line:275	type:int32
+pt	refs/nk-android/main.go	24;"	v	access:private	line:24	type:float32
+queueIdent	refs/example-egl/sensor.go	43;"	c	access:private	line:43
+quit	refs/example-egl/sensor.go	26;"	w	access:private	ctype:SensorMan	line:26	type:bool
+quitC	refs/example-egl/sensor.go	23;"	w	access:private	ctype:SensorMan	line:23	type:chan 
+refreshRate	refs/example-egl/sensor.go	17;"	w	access:private	ctype:SensorMan	line:17	type:time.Duration
+runtime	refs/example-egl/main.go	5;"	i	line:5
+runtime	refs/example-egl/sensor.go	5;"	i	line:5
+runtime	refs/minimal/main.go	5;"	i	line:5
+runtime	refs/nk-android/main.go	6;"	i	line:6
+sensorEventQueue	refs/example-egl/sensor.go	15;"	w	access:private	ctype:SensorMan	line:15	type:*android.SensorEventQueue
+sensorManager	refs/example-egl/sensor.go	14;"	w	access:private	ctype:SensorMan	line:14	type:*android.SensorManager
+size	android/fonts/dejavu.go	67;"	w	access:private	ctype:bindataFileInfo	line:67	type:int64
+size	refs/nk-android/bindata.go	48;"	w	access:private	ctype:bindataFileInfo	line:48	type:int64
+sleep	refs/example-egl/sensor.go	24;"	w	access:private	ctype:SensorMan	line:24	type:bool
+startC	refs/example-egl/sensor.go	21;"	w	access:private	ctype:SensorMan	line:21	type:chan 
+stopC	refs/example-egl/sensor.go	22;"	w	access:private	ctype:SensorMan	line:22	type:chan 
+strings	android/fonts/dejavu.go	36;"	i	line:36
+strings	refs/nk-android/bindata.go	17;"	i	line:17
+time	android/fonts/dejavu.go	37;"	i	line:37
+time	refs/example-egl/main.go	6;"	i	line:6
+time	refs/example-egl/sensor.go	6;"	i	line:6
+time	refs/nk-android/bindata.go	18;"	i	line:18
+time	refs/nk-android/main.go	7;"	i	line:7
+times	refs/nk-android/main.go	277;"	w	access:private	ctype:State	line:277	type:int
+toggleKeyboard	refs/nk-android/main.go	235;"	f	access:private	line:235	signature:(activity *android.NativeActivity, state *State)
+unsafe	refs/android.go	32;"	i	line:32
+width	refs/nk-android/main.go	271;"	w	access:private	ctype:State	line:271	type:int
