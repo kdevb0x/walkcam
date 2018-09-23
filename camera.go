@@ -1,8 +1,10 @@
-package walkcam // import "walkcam"
+package walkcam
 
 import (
 	"log"
 	"os"
+	"syscall"
+	"unsafe"
 
 	"github.com/xlab/android-go/android"
 	"github.com/xlab/android-go/app"
@@ -10,7 +12,28 @@ import (
 	"gocv.io/x/gocv"
 )
 
-type CameraDevice struct {
-	Name   string
-	Device *gocv.
+type Display struct {
+	Window gocv.Window
+	SizeX  float64
+	SizeY  float64
+	Canvas android.NativeWindow
 }
+
+// CameraDevice is a unix camera or video device.
+type CameraDevice struct {
+	Name string
+	Fd   *os.File
+}
+
+type AndroidCamera struct {
+	DeviceName string
+}
+
+func NewAndroidCamera(name ...string) AndroidCamera {
+	return AndroidCamera{name...}
+}
+
+func (c *AndroidCamera) Init() error {
+	cameraManager := android.JNIEnvFindClass()
+}
+func (c AndroidCamera) OpenDevice(android.Jobject)

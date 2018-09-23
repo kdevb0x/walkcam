@@ -10,3 +10,4 @@ github.com/xlab/android-go v0.0.0-20180723170811-ebf4d6dd1830 h1:t4JWwVd06FAAZiT
 github.com/xlab/android-go v0.0.0-20180723170811-ebf4d6dd1830/go.mod h1:cX5Ob29gFddv5hlAJN3tmNcvHuNQwUXzIP06azWW1M8=
 gocv.io/x/gocv v0.16.0 h1:mJ5mbvf973hIC+LZufx7G7htJFRCRt6SNSOIk1eW5rQ=
 gocv.io/x/gocv v0.16.0/go.mod h1:3qacsKAMRS0sZmeLySWcbFeVEU3t86igWaQleAgiuBg=
+golang.org/x/mobile v0.0.0-20180918110915-f9c332960c2a h1:g1yx1SSoLJs9YRT5kH1NQo7ioglgoKzoOXPKXU27+fU=
