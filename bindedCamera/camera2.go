@@ -1,7 +1,7 @@
 package main // import "walkcam"
 
 import (
-	cam "Java/android/hardware/Camera"
+	"Java/android/hardware/Camera"
 	"Java/android/hardware/CameraInfo"
 	"Java/android/hardware/camera2/CameraCaptureSession"
 	"Java/android/hardware/camera2/CameraDevice"
@@ -19,10 +19,4 @@ import (
 
 	"github.com/xlab/android-go/android"
 	"github.com/xlab/android-go/app"
-	"golang.org/x/mobile"
 )
-
-type Camera struct {
-	Cam cam.Camera
-	OnCreate func
-}

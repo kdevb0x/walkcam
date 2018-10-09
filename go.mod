@@ -7,4 +7,5 @@ require (
 	github.com/veandco/go-sdl2 v0.0.0-20180912100132-3dabe02ca25e // indirect
 	github.com/xlab/android-go v0.0.0-20180723170811-ebf4d6dd1830
 	gocv.io/x/gocv v0.16.0
+	golang.org/x/exp v0.0.0-20180907224206-e88728d35e99
 )
