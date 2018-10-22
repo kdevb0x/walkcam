@@ -1,0 +1,146 @@
+﻿Binding Go and Java
+
+
+David Crawshaw
+July 2014
+
+
+Abstract
+
+
+We propose language bindings between Go and Java, using code generation built on cgo. The bindings are generated from the exported symbols of a Go package and are designed for use from languages with notions of objects and methods. Two key goals are zero configuration (no SWIG file equivalent) and the ability to support other language targets, like Objective C. The implementation will live in the go.mobile subrepository as the gobind tool.
+
+
+Background
+
+
+The state of the art in Go foreign function interfaces is cgo. It generates code that manages the subtle mapping of the Go runtime onto C functions. It also maps C types into Go.
+
+
+As C is the common language of modern operating systems and other language runtimes, cgo lets Go communicate with other languages sharing the same process. However, the process is rather involved. Java uses its own foreign function interface, JNI, in which users must manually map Java data structures into C data structures, call Go via cgo, and then manually map the data structures into Go. While not challenging, it can be tedious. This is a job for a machine.
+
+
+Proposal
+
+
+A command line tool, gobind, takes a Go package and generates a .go file and a .java file. The .go file is intended to form a new package that is imported into the main package of a Go binary. The .java file contains public types for use by programmers, the .go file is glue. To simplify builds, the necessary JNI is generic and built into the bind libraries.
+
+
+The exported Go API designed by the user defines the language binding. No other configuration is necessary.
+
+
+Initially, only a subset of Go’s type system is supported. There is no reason the entire type system could not be supported, but there are some awkward corner cases, and it is a significant undertaking.
+
+
+The implementation has some small Android dependencies. These are relatively easy to remove, so a future version can be used to interact with Java programs on a standard desktop JVM. This is not a priority, as the Go 1.4 will runtime only supports being dynamically loaded by the JVM when compiled for Android.
+
+
+Supported Go types
+
+
+An entire Go package is mapped to a single Java class. Basic value types (int32, int64, string, map[K]V etc) are mapped to Java primitive types where possible (int, long, java.lang.String, java.util.Map<K,V>). Strings are transcoded. Unsigned integers are not supported for now.
+
+
+Package functions generate static methods. 
+Package variables generate static get and set methods.
+
+
+Pointers to struct types generate nested classes, with getters and setters for exported fields and methods for exported methods. The getters and setters modify the value in the Go struct. Generated classes act as a proxy, delegating accesses and updates to the Go objcet.
+
+
+Passing and returning a struct S promotes it to *S for the purpose of generating bindings.
+
+
+Multiple return values from functions and methods are (at least initially) not supported with one exception: returning (T, error) will convert the error into a Java exception. E.g.
+
+
+func F(name string, d []*Input) (*Output, error) { … } 
+
+
+generates
+
+
+public static Output F(String name, Input[] d) throws Go.Execption { … }
+
+
+Converting errors to exceptions is not motivated by any preference for exception, but by a desire to make generated code match the common idioms and style of the target language. SWIG makes everything look like C++, gobind should not make everything look like Go.
+
+
+Exported interface types generate a Java interface, along with a stub and proxy class. The stub class can be subclassed by users to implement an interface, a proxy is returned by generated code 
+
+
+type I interface {
+        Key(code int)
+        Tap(x, y int)
+}
+
+
+generates a nested interface
+
+
+public interface I {
+public void Key(int code);
+public void Tap(int x, int y);
+public abstract static class Stub implements I … {
+// allows Java to implement an interface to be passed to Go
+}
+static final class Proxy implements I {
+        // …
+}
+}
+
+
+(In a future implementation, every generated class of a type T that implements an interface I will implement I, and the concrete generated class will be used instead of the proxy class, allowing Java to typecast interfaces.)
+
+
+Slices are copied into Java arrays. A function returning an []int32 slice returns an int[]. This makes passing slices to and from Java more expensive than passing slices in Go, but provides idiomatic Java objects where they are expected.
+
+
+Name collisions with reserved words cause an error at generation time.
+
+
+Java implementations of the interface passed to Go must subclass the Stub class, as it implements the unpacking of Go arguments and calling of methods.
+
+
+Not supported in the initial version: types from other packages, channels, variadic argument lists, arrays. These will be added in a later version, after basic Objective C support is complete.
+
+
+Implementation
+
+
+To simplify the initial implementation, communication between Go and Java is treated like a simplified RPC protocol. Requests and responses are encoded with seq, a simple machine-dependent serialization format, inspired by Android’s Binder. The Go representation of a seq message is a *seq.Buffer.
+
+
+This RPC-like abstraction probably hurts performance, but simplifies the implementation of multiple language bindings. And as it is entirely internal, we have the option of deconstructing it later to improve performance.
+
+
+A request from Java for a function or method to be invoked (via Seq.send) is sent with a descriptor and code used to identify the function. If it is a method call, the first value in the seq.Buffer is a ref number to a Go object (see the section on reference tracking), and it is the job of the generated proxy code to extract it and look up the Ref. Response values are packaged into a seq and returned through the same cgo call.
+
+
+Calls to Java implementations of Go interfaces start with generated Go code creating a seq and sending it to a queue being processed by a Java thread. The Java receive logic is also sent a code, handle, and refnum. The code identifies the Java method to invoke, the refnum is the object instance to invoke it on, and the handle used to identify this request when returning the result to Go. Each callback is executed in its own Java thread.
+
+
+Package layout
+
+
+go.mobile/
+cmd/gobind                command line tool
+bind/                        code generator, used by command line tool
+        bindjava        cgo-JNI bridge, imported by generated code
+registry        global registration for wrapped functions
+        seq                data serialization format - Go implementation
+
+
+Reference tracking between Garbage Collectors
+
+
+Sharing objects between Go and Java has an interesting challenge: each language has its own precise garbage collector. If a pointer is passed from one language to another, a copy of the pointer must be maintained in the original language to avoid collection. Furthermore, Android L is introducing a moving collector with ART and Go has similar long-term plans, so passing pointers at all between languages will not work.
+
+
+To manage this, when the generated stub code attempts to pass a pointer from one language to another, it registers it with a global map maintained in the object’s host language. This map provides a unique reference number which is passed to the target language. The target language wraps the reference number in a reference object (called a Ref in both Java and Go) and sets a finalizer. The finalizer, when called, sends a message to the map in the other language telling it to remove its copy of the object. If the object is no longer used, the GC can collect it.
+
+
+We are using one GC to track objects using a proxy object (Ref) and inform the other GC, via a finalizer, when it is done with it.
+
+
+Unfortunately, this introduces the possibility of a reference cycle. Consider a Java object J and a Go object G. A reference to J is passed to Go, and stored inside G. Then a reference to G is passed to Java, and stored in J. Even if all other pointers to both J and G are discarded, the reference tracking tables will still contain references, so the cycle will not be broken. The risk of cycles will be carefully documented.
