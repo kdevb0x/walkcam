@@ -13,24 +13,24 @@ import (
 )
 
 type Display struct {
-	Window gocv.Window
+	Window gl.
 	SizeX  float64
 	SizeY  float64
-	Canvas android.NativeWindow
+	Canvas *android.NativeWindow
 }
 
 // CameraDevice is a unix camera or video device.
 type CameraDevice struct {
 	Name string
-	Fd   *os.File
+	Fd   *os.File // the device; prob /dev/video0
 }
 
 type AndroidCamera struct {
 	DeviceName string
 }
 
-func NewAndroidCamera(name ...string) AndroidCamera {
-	return AndroidCamera{name...}
+func NewAndroidCamera(name string) AndroidCamera {
+	return AndroidCamera{name}
 }
 
 func (c *AndroidCamera) Init() error {
