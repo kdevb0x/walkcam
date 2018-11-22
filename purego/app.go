@@ -1,8 +1,11 @@
-package main // import "gocamera"
+package main
 
 import (
-	"runtime"
 	"io"
+	"os"
+	"runtime"
 
-	"github.com/kunaldawn/goandroid/view"
+	"github.com/kdevb0x/walkcam/purego/walkcam"
+	"github.com/xlab/android-go/android"
+	"github.com/xlab/android-go/app"
 )
